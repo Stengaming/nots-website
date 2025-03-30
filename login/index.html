@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             background-color: #000;
             color: #fff;
-            background-image: url('https://www.w3schools.com/w3images/stars.jpg'); /* Sterren achtergrond */
+            background-image: url('https://www.w3schools.com/w3images/stars.jpg');
             background-size: cover;
             display: flex;
             justify-content: center;
@@ -19,7 +19,7 @@
             text-align: center;
         }
         .container {
-            background-color: rgba(0, 0, 0, 0.7); /* Donkere transparante achtergrond */
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
@@ -80,12 +80,17 @@
             const password = document.getElementById("password").value;
             const errorMessage = document.getElementById("errorMessage");
 
-            if (username && password) {
+            // Haal de opgeslagen gebruikersnaam en wachtwoord op uit localStorage
+            const storedUsername = localStorage.getItem("username");
+            const storedPassword = localStorage.getItem("password");
+
+            // Controleer of de ingevoerde gegevens overeenkomen met de opgeslagen gegevens
+            if (username === storedUsername && password === storedPassword) {
                 errorMessage.textContent = "";
                 // Redirect naar test.html na succesvolle login
-                window.location.href = "test.html"; 
+                window.location.href = "test.html";
             } else {
-                errorMessage.textContent = "Vul zowel gebruikersnaam als wachtwoord in.";
+                errorMessage.textContent = "Ongeldige gebruikersnaam of wachtwoord.";
             }
         });
     </script>
