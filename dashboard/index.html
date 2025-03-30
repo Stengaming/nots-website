@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Minecraft Server Status</title>
+    <title>Dashboard - Minecraft Server Status & Subdomeinen</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -24,11 +24,15 @@
             border-radius: 12px;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
             width: 80%;
-            max-width: 800px;
+            max-width: 900px;
             text-align: left;
         }
         h1 {
             font-size: 36px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 28px;
             margin-bottom: 20px;
         }
         p {
@@ -57,29 +61,45 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+            margin-top: 20px;
         }
         .logout:hover {
             background-color: #c9302c;
+        }
+        .section {
+            margin-top: 40px;
+        }
+        .section h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+        .section p {
+            font-size: 16px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welkom op je Minecraft Dashboard</h1>
-        <p>Dit is je persoonlijke dashboard voor het beheren van je Minecraft-serverstatus en subdomeinen. Hier kun je je serverstatus controleren, subdomeinen beheren, en meer!</p>
+        <h1>Welkom op je Dashboard!</h1>
+        <p>Dit is je persoonlijke dashboard voor het beheren van je Minecraft-serverstatus en subdomeinen. Hier kun je eenvoudig je serverstatus bekijken, subdomeinen beheren en meer!</p>
 
-        <div class="feature">
-            <h3>✔️ Server Status</h3>
-            <p>Bekijk de status van je Minecraft-server, inclusief uptime, pingtijd en versie-informatie.</p>
-        </div>
-        <div class="feature">
-            <h3>✔️ Subdomeinen Beheren</h3>
-            <p>Beheer je subdomeinen, maak nieuwe aan of pas bestaande aan voor je server.</p>
+        <!-- Minecraft Server Status -->
+        <div class="section">
+            <h3>✔️ Minecraft Server Status</h3>
+            <p>Bekijk de realtime status van je Minecraft-server, inclusief uptime, ping, versie-informatie en meer!</p>
+            <button onclick="window.location.href='minecraft_status.html'">Bekijk Server Status</button>
         </div>
 
-        <button onclick="window.location.href='minecraft_status.html'">Bekijk Server Status</button>
-        <button onclick="window.location.href='subdomains.html'">Beheer Subdomeinen</button>
-        
+        <!-- Subdomeinen -->
+        <div class="section">
+            <h3>✔️ Subdomeinen voor Websites</h3>
+            <p>Beheer je subdomeinen voor je Minecraft-server of andere websites die je hebt. Maak nieuwe subdomeinen aan, pas ze aan, of verwijder ze.</p>
+            <button onclick="window.location.href='subdomains.html'">Beheer Subdomeinen</button>
+        </div>
+
+        <!-- Uitloggen knop -->
         <button class="logout" onclick="logout()">Uitloggen</button>
     </div>
 
