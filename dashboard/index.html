@@ -87,7 +87,7 @@
         // Controleer of de gebruiker is ingelogd via localStorage
         if (!localStorage.getItem('username') || !localStorage.getItem('password')) {
             // Als de gebruiker niet is ingelogd, wordt hij doorgestuurd naar de loginpagina
-            window.location.href = 'login.html';
+            window.location.href = '/login';
         }
 
         // Uitlogfunctie
@@ -96,7 +96,7 @@
             localStorage.removeItem('username');
             localStorage.removeItem('password');
             // Stuur de gebruiker terug naar de loginpagina
-            window.location.href = 'login.html';
+            window.location.href = '/login';
         }
     </script>
 </body>
