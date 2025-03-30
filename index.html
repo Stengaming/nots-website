@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Minecraft Status & Subdomeinen</title>
+    <title>Home - Minecraft Server Status & Subdomeinen</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -66,6 +66,10 @@
         .feature p {
             font-size: 16px;
         }
+        .cta {
+            margin-top: 40px;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
@@ -77,15 +81,20 @@
         <div class="features">
             <div class="feature">
                 <h3>✔️ Minecraft Server Status</h3>
-                <p>Controleer eenvoudig de status van je Minecraft-server. Of je nu op zoek bent naar server uptime, pingtijd, of versie-informatie, wij bieden de tools om deze gegevens snel en efficiënt in te zien.</p>
+                <p>Met onze tool kun je de status van je Minecraft-server in realtime controleren. Bekijk de uptime, ping, versie-informatie en meer.</p>
+                <button onclick="window.location.href='/login'">Bekijk Server Status</button>
             </div>
             <div class="feature">
-                <h3>✔️ Subdomeinen Ondersteuning</h3>
-                <p>Onze service maakt het mogelijk om subdomeinen te beheren voor je Minecraft-server. Of het nu gaat om het creëren van een lobby, een forum of andere subdomeinen voor je Minecraft-community, we ondersteunen je bij alles wat je nodig hebt.</p>
+                <h3>✔️ Subdomeinen voor Websites</h3>
+                <p>Maak eenvoudig subdomeinen aan voor je websites die je beheert. Pas ze aan voor specifieke doeleinden zoals forums, lobbys of community-websites.</p>
+                <button onclick="window.location.href='/login'">Beheer Subdomeinen</button>
             </div>
         </div>
-        
-        <button onclick="window.location.href='/login'">Login om verder te gaan</button>
+
+        <div class="cta">
+            <p>Wil je beginnen? Maak een account aan of log in om toegang te krijgen tot alle functies!</p>
+            <button onclick="window.location.href='/login'">Inloggen</button>
+        </div>
     </div>
 </body>
 </html>
